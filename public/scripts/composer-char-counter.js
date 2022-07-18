@@ -19,7 +19,7 @@ $(document).ready(function() {
     } else if ((remainingChars = 140)) {
       $('.submit-button').attr('disabled', 'disabled');
     }
-    console.log(remainingChars);
-    console.log(char.length);
+    // console.log(remainingChars);
+    // console.log(char.length);
   });
 });

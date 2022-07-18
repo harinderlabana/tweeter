@@ -35,4 +35,5 @@ main {
   flex-direction: column;
   width: 90vw;
   background-color: body;
+  padding: 2em 0;
 }

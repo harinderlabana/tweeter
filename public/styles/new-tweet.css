@@ -1,6 +1,7 @@
 .post-tweet-form {
   display: flex;
   flex-direction: column;
+  padding-top: 2em;
 }
 
 textarea {

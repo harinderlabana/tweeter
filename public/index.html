@@ -19,10 +19,18 @@
       rel="stylesheet"
     />
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome Library -->
     <script
       src="https://kit.fontawesome.com/d0d064fc80.js"
       crossorigin="anonymous"
+    ></script>
+
+    <!-- timeago Library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+      integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
 
     <!-- App CSS -->
@@ -69,7 +77,6 @@
     <main class="container">
       <!-- New tweet input box -->
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form class="post-tweet-form" action="/tweets" method="POST">
           <label class="text-title" for="tweet-text"
             >What are you humming about?</label
@@ -85,28 +92,14 @@
       </section>
 
       <!-- Tweet feed -->
-      <section class="tweet-feed">
-        <div class="tweet-header">
-          <div class="user-badge">
-            <div class="user-avatar">HEAD</div>
-            <div class="user-name">Newton</div>
-          </div>
-          <div class="user-handle">@SirIsaac</div>
-        </div>
+      <section class="tweets-container"></section>
 
-        <article>
-          <div class="user-tweet">Hey! I just tweeted something!</div>
-        </article>
-
-        <div class="tweet-footer">
-          <div class="date-posted">10 days ago</div>
-          <div class="interaction-icons">
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </div>
-      </section>
+      <div class="loading-gif">
+        <img
+          src="https://static.wixstatic.com/media/da1b60_6454bb65c2774cf388ff6d907b193a38~mv2.gif"
+          alt="loading bird"
+        />
+      </div>
     </main>
   </body>
 </html>

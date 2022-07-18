@@ -3,8 +3,8 @@
   flex-direction: column;
   row-gap: 1em;
   border: 0.2em solid black;
-  margin-top: 2em;
-  padding: 1em;
+  margin-top: 1.5em;
+  padding: 1em 1em 0em 1em;
 }
 
 .tweet-header {
@@ -16,6 +16,7 @@
 .user-badge {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .user-avatar {
@@ -35,7 +36,7 @@
   flex-direction: row;
   justify-content: space-between;
   font-size: 0.75em;
-  padding: 0em 1em 0em 1em;
+  padding: 0em 1em 1em 0em;
 }
 
 i:hover {
@@ -44,4 +45,15 @@ i:hover {
 
 .tweet-feed:hover {
   box-shadow: 0.5em 0.5em;
+}
+
+.loading-gif {
+  max-width: 800px;
+  width: fit-content;
+  margin: 1em auto;
+  display: none;
+}
+
+.loading-gif img {
+  width: 100%;
 }
