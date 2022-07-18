@@ -48,7 +48,7 @@ i:hover {
 }
 
 .loading-gif {
-  max-width: 800px;
+  max-width: 500px;
   width: fit-content;
   margin: 1em auto;
   display: none;

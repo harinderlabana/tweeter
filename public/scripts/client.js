@@ -8,6 +8,13 @@
 $(document).ready(() => {
   console.log('DOCUMENT READY');
 
+  // ESCAPE FUNCTION
+  const escape = function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // CREATE TWEET
   const createTweetElement = (tweet) => {
     let tweetElement = `
@@ -15,19 +22,21 @@ $(document).ready(() => {
           <div class="tweet-header">
             <div class="user-badge">
               <div class="user-avatar">
-                <img src="${tweet.user.avatars}" />
+                <img src="${escape(tweet.user.avatars)}" />
               </div>
-              <div class="user-name">${tweet.user.name}</div>
+              <div class="user-name">${escape(tweet.user.name)}</div>
             </div>
-            <div class="user-handle">${tweet.user.handle}</div>
+            <div class="user-handle">${escape(tweet.user.handle)}</div>
           </div>
 
           <article>
-            <div class="user-tweet">${tweet.content.text}</div>
+            <div class="user-tweet">${escape(tweet.content.text)}</div>
           </article>
 
           <div class="tweet-footer">
-            <div class="date-posted">${timeago.format(tweet.created_at)}</div>
+            <div class="date-posted">${escape(
+    timeago.format(tweet.created_at)
+  )}</div>
             <div class="interaction-icons">
               <i class="fa-solid fa-flag"></i>
               <i class="fa-solid fa-retweet"></i>
@@ -58,13 +67,14 @@ $(document).ready(() => {
         $(this).serialize(), // data to be submit
         function() {
           // success callback
+          $('#tweet-text').val('');
           $('.tweets-container').empty();
           $('.loading-gif').hide();
           loadtweets();
           console.log('FORM SUBMITTED');
         }
       );
-    }, 2000);
+    }, 1500);
   });
 
   // LOAD TWEETS
