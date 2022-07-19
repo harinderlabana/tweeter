@@ -13,13 +13,14 @@ $(document).ready(function() {
     if (remainingChars >= 0) {
       $('.counter').css('color', 'black');
       $('.submit-button').removeAttr('disabled');
+      $('.new-tweet-alert').hide();
     } else if (remainingChars < 0) {
       $('.counter').css('color', 'red');
       $('.submit-button').attr('disabled', 'disabled');
-    } else if ((remainingChars = 140)) {
+      $('.new-tweet-alert').show();
+    } else if (remainingChars === 140) {
       $('.submit-button').attr('disabled', 'disabled');
+      $('.new-tweet-alert').hide();
     }
-    // console.log(remainingChars);
-    // console.log(char.length);
   });
 });

@@ -1,13 +1,13 @@
 .post-tweet-form {
   display: flex;
   flex-direction: column;
-  padding-top: 2em;
+  padding-top: 1em;
 }
 
 textarea {
-  background-color: #f4f1ec;
-  border-color: #f4f1ec;
-  border-bottom: black solid 0.2em;
+  background-color: #d89216;
+  border-color: #d89216;
+  border-bottom: #161616 solid 0.2em;
   resize: none;
   font-weight: 600;
   font-size: 1em;
@@ -22,8 +22,8 @@ textarea {
   justify-content: space-between;
   padding-top: 0.5em;
   font-family: 'Bungee', cursive;
-  font-size: 0.75em;
-  color: black;
+  font-size: 0.8em;
+  color: #161616;
 }
 
 .text-title {
@@ -32,6 +32,23 @@ textarea {
 }
 
 .submit-button {
-  background-color: #4056a1;
-  color: #f4f1ec;
+  background-color: #161616;
+  color: #ecdbba;
+  padding-top: 0.3em;
+}
+
+.new-tweet-alert {
+  display: none;
+  background-color: red;
+  padding: 0.3em;
+  color: WHITE;
+  font-weight: 600;
+}
+
+.new-tweet-alert span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5em;
 }

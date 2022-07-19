@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   row-gap: 1em;
-  border: 0.2em solid black;
+  border: 0.2em solid #161616;
+  background-color: #ecdbba;
   margin-top: 1.5em;
   padding: 1em 1em 0em 1em;
 }
@@ -26,7 +27,7 @@
 
 .user-tweet {
   display: flex;
-  border-bottom: black solid 0.2em;
+  border-bottom: #000000 solid 0.2em;
   font-weight: 600;
   padding: 1em;
 }
@@ -40,11 +41,11 @@
 }
 
 i:hover {
-  color: goldenrod;
+  color: violet;
 }
 
 .tweet-feed:hover {
-  box-shadow: 0.5em 0.5em;
+  box-shadow: 0.5em 0.5em #161616;
 }
 
 .loading-gif {

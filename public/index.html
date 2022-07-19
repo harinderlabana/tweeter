@@ -54,9 +54,9 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span class="nav-title">tweeter</span>
+      <span class="nav-title">stinger</span>
       <div class="nav-right">
-        <p><strong>Write</strong> a new tweet</p>
+        <p><strong>Write</strong> a new sting</p>
         <div class="nav-arrow-down">
           <i class="fa-solid fa-angles-down"></i>
         </div>
@@ -65,8 +65,8 @@
 
     <!-- Header content (scrolling) -->
     <header>
-      <div>
-        <img src="/images/profile-hex.png" />
+      <div class="profile-picture">
+        <img src="/images/profile-bear.png" />
       </div>
       <div class="front-name">
         <p><strong>Harinder </strong>Labana</p>
@@ -77,29 +77,36 @@
     <main class="container">
       <!-- New tweet input box -->
       <section class="new-tweet">
+        <div class="new-tweet-alert">
+          <span>
+            <i class="fa-solid fa-circle-exclamation"></i>
+            Too many characters! You are over the 140 character limit.
+          </span>
+        </div>
         <form class="post-tweet-form" action="/tweets" method="POST">
           <label class="text-title" for="tweet-text"
-            >What are you humming about?</label
+            >What are you buzzing about?</label
           >
           <textarea name="text" id="tweet-text" maxlength="210"></textarea>
           <div class="tweet-character-tracker">
             <button class="submit-button" type="submit" disabled="disabled">
-              Tweet
+              sting
             </button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
 
-      <!-- Tweet feed -->
-      <section class="tweets-container"></section>
-
+      <!-- Loading GIF -->
       <div class="loading-gif">
         <img
-          src="https://i.pinimg.com/originals/af/a8/04/afa804efe31971245d629b220c22232b.gif"
+          src="https://static.wixstatic.com/media/cbc41e_f1d433a084d64d029258638521d65cf2~mv2.gif"
           alt="loading bird"
         />
       </div>
+
+      <!-- Tweet feed -->
+      <section class="tweets-container"></section>
     </main>
   </body>
 </html>

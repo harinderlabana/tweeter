@@ -60,6 +60,7 @@ $(document).ready(() => {
     event.preventDefault();
     $('.tweets-container').empty();
     $('.loading-gif').show();
+    $('.new-tweet').hide();
     //UX element
     setTimeout(() => {
       $.post(
@@ -67,14 +68,17 @@ $(document).ready(() => {
         $(this).serialize(), // data to be submit
         function() {
           // success callback
-          $('#tweet-text').val('');
           $('.tweets-container').empty();
           $('.loading-gif').hide();
+          $('.new-tweet').show();
+          $('#tweet-text').val('');
+          $('.counter').text(escape('140'));
+          $('.submit-button').attr('disabled', 'disabled');
           loadtweets();
           console.log('FORM SUBMITTED');
         }
       );
-    }, 1500);
+    }, 700);
   });
 
   // LOAD TWEETS
