@@ -67,16 +67,16 @@ $(document).ready(() => {
         $(this).serialize(), // data to be submit
         function() {
           // success callback
-          $('.loading-gif').hide();
           $('.tweets-container').empty();
           $('#tweet-text').val('');
           $('.counter').text(escape('140'));
           $('.submit-button').attr('disabled', 'disabled');
           loadtweets();
+          $('.loading-gif').hide();
           console.log('FORM SUBMITTED');
         }
       );
-    }, 600);
+    }, 150);
   });
 
   // LOAD TWEETS

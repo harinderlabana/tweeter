@@ -18,11 +18,9 @@ header {
 @media all and (min-width: 875px) {
   header {
     margin-top: 8em;
-    padding-top: 0.5em;
-    padding-left: 0.5em;
-    padding-right: 0em;
+    padding: 1em;
     background-color: #d89216;
-    width: 40vw;
+    width: auto;
     font-size: 1.5em;
     color: #161616;
   }

@@ -35,7 +35,7 @@ main {
   flex-direction: column;
   width: 90vw;
   background-color: body;
-  padding: 1em 1.5em 2em 1.5em;
+  padding: 1em 1.5em 2em 2em;
 }
 
 @media all and (min-width: 875px) {
@@ -43,10 +43,19 @@ main {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    justify-content: center;
   }
 
   .new-tweet {
     padding-top: 5em;
+  }
+
+  main {
+    max-width: 1000px;
+  }
+
+  header {
+    float: inline-start;
   }
 }
 
