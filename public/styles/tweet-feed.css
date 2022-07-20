@@ -40,8 +40,9 @@
   padding: 0em 1em 1em 0em;
 }
 
-i:hover {
+.tweet-feed i:hover {
   color: violet;
+  cursor: pointer;
 }
 
 .tweet-feed:hover {
