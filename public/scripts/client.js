@@ -55,8 +55,9 @@ $(document).ready(() => {
     }
   };
 
-  $('.nav-arrow-down').click(function() {
+  $('.nav-right').click(function() {
     $('.new-tweet').toggle('slide');
+    $('#tweet-text').focus();
   });
 
   // HANDLES SUBMIT FORM
