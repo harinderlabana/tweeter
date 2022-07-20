@@ -12,5 +12,18 @@ header {
 }
 
 .profile-picture img {
-  max-width: 250px;
+  max-width: 7.2em;
+}
+
+@media all and (min-width: 875px) {
+  header {
+    margin-top: 8em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0em;
+    background-color: #d89216;
+    width: 40vw;
+    font-size: 1.5em;
+    color: #161616;
+  }
 }

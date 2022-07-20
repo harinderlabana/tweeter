@@ -23,7 +23,7 @@ body {
   color: BLACK;
   background-color: #d89216;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 /*
@@ -35,5 +35,23 @@ main {
   flex-direction: column;
   width: 90vw;
   background-color: body;
-  padding: 2em 0;
+  padding: 1em 1.5em 2em 1.5em;
+}
+
+@media all and (min-width: 875px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .new-tweet {
+    padding-top: 5em;
+  }
+}
+
+@media all and (max-width: 875px) {
+  main {
+    padding: 1em 0.5em 2em 0.5em;
+  }
 }
