@@ -55,11 +55,15 @@ $(document).ready(() => {
     }
   };
 
+  $('.nav-arrow-down').click(function() {
+    $('.new-tweet').toggle('slide');
+  });
+
   // HANDLES SUBMIT FORM
   $('.post-tweet-form').submit(function(event) {
     event.preventDefault();
     $('.tweets-container').empty();
-    $('.loading-gif').show();
+    $('.loading-gif').show('slide');
     //UX element
     setTimeout(() => {
       $.post(
@@ -76,7 +80,7 @@ $(document).ready(() => {
           console.log('FORM SUBMITTED');
         }
       );
-    }, 150);
+    }, 500);
   });
 
   // LOAD TWEETS

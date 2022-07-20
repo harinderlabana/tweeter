@@ -17,7 +17,7 @@ header {
 
 @media all and (min-width: 875px) {
   header {
-    margin-top: 8em;
+    margin-top: 6em;
     padding: 1em;
     background-color: #d89216;
     width: auto;

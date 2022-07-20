@@ -17,7 +17,7 @@ $(document).ready(function() {
     } else if (remainingChars < 0) {
       $('.counter').css('color', 'red');
       $('.submit-button').attr('disabled', 'disabled');
-      $('.new-tweet-alert').show();
+      $('.new-tweet-alert').show('slide');
     } else if (remainingChars === 140) {
       $('.submit-button').attr('disabled', 'disabled');
       $('.new-tweet-alert').hide();

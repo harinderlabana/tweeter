@@ -27,6 +27,7 @@ nav {
   align-items: center;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 0.75em;
+  cursor: pointer;
 }
 
 span a {
@@ -67,7 +68,6 @@ span a {
   color: #ecdbba;
 }
 .nav-arrow-down:hover {
-  cursor: pointer;
   animation-name: bounce;
   -moz-animation-name: bounce;
 }
