@@ -59,8 +59,7 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-
-    <nav>
+    <nav id="nav">
       <span class="nav-title"><a href="#top">stinger</a></span>
       <div class="nav-right">
         <p><strong>Write</strong> a new sting</p>
@@ -69,6 +68,8 @@
         </div>
       </div>
     </nav>
+
+    <button id="toTop" title="Go to top"><a href="#top">TOP</a></button>
 
     <!-- Header content (scrolling) -->
     <header>
@@ -82,29 +83,16 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-
       <!-- New tweet input box -->
       <section class="new-tweet">
-        <div class="new-tweet-alert">
-          <span>
-            <i class="fa-solid fa-circle-exclamation"></i>
-            Too many characters! You are over the 140 character limit.
-          </span>
-        </div>
+        <div class="new-tweet-alert"></div>
         <form class="post-tweet-form" action="/tweets" method="POST">
           <label class="text-title" for="tweet-text"
             >What are you buzzing about?</label
           >
-          <textarea
-            name="text"
-            id="tweet-text"
-            maxlength="210"
-            autofocus
-          ></textarea>
+          <textarea name="text" id="tweet-text" maxlength="210"></textarea>
           <div class="tweet-character-tracker">
-            <button class="submit-button" type="submit" disabled="disabled">
-              sting
-            </button>
+            <button class="submit-button" type="submit">sting</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
@@ -117,7 +105,6 @@
 
       <!-- Tweet feed -->
       <section class="tweets-container"></section>
-      
     </main>
   </body>
 </html>

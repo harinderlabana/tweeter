@@ -63,6 +63,22 @@ $(document).ready(() => {
   // HANDLES SUBMIT FORM
   $('.post-tweet-form').submit(function(event) {
     event.preventDefault();
+
+    const tweet = $('#tweet-text').val();
+    console.log('tweet length: ', tweet.length);
+
+    $('.new-tweet-alert').hide();
+
+    if (tweet.length > 140) {
+      $('.new-tweet-alert')
+        .show('slide')
+        .text(escape('Exceeding character limit!'));
+      return;
+    } else if (tweet.length === 0) {
+      $('.new-tweet-alert').show('slide').text(escape('Your sting is empty!'));
+      return;
+    }
+
     $('.tweets-container').empty();
     $('.loading-gif').show('slide');
     //UX element
@@ -75,13 +91,13 @@ $(document).ready(() => {
           $('.tweets-container').empty();
           $('#tweet-text').val('');
           $('.counter').text(escape('140'));
-          $('.submit-button').attr('disabled', 'disabled');
+          // $('.submit-button').attr('disabled', 'disabled');
           loadtweets();
           $('.loading-gif').hide();
           console.log('FORM SUBMITTED');
         }
       );
-    }, 500);
+    }, 600);
   });
 
   // LOAD TWEETS

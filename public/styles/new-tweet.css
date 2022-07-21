@@ -40,16 +40,9 @@ textarea {
 
 .new-tweet-alert {
   display: none;
+  text-align: center;
   background-color: red;
   padding: 0.3em;
   color: WHITE;
   font-weight: 600;
-}
-
-.new-tweet-alert span {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  column-gap: 0.5em;
 }
