@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: BLACK;
+  color: 161616;
   background-color: #d89216;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.5em;
@@ -42,16 +42,17 @@ main {
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 30px;
+  right: 20px;
   z-index: 99;
-  font-size: 18px;
+  font-size: 1em;
+  font-weight: 600;
   border: none;
   outline: none;
-  background-color: red;
-  color: white;
+  background-color: #161616;
+  color: #ecdbba;
   cursor: pointer;
   padding: 1em;
-  border-radius: 4em;
+  border-radius: 50%;
 }
 
 #toTop a {

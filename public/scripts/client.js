@@ -1,19 +1,24 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 //DOCUMENT READY
 $(document).ready(() => {
-  console.log('DOCUMENT READY');
-
   // ESCAPE FUNCTION
   const escape = function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
+
+  // PREVENTS 'ENTER' TO BE USED IN TEXTAREA
+  $('#tweet-text').keypress(function(event) {
+    if (event.keyCode == 13) {
+      event.preventDefault();
+    }
+  });
+
+  // SHOW/HIDE NEW TWEET ELEMENT
+  $('.nav-right').click(function() {
+    $('.new-tweet').toggle('slide');
+    $('#tweet-text').focus();
+  });
 
   // CREATE TWEET
   const createTweetElement = (tweet) => {
@@ -55,18 +60,10 @@ $(document).ready(() => {
     }
   };
 
-  $('.nav-right').click(function() {
-    $('.new-tweet').toggle('slide');
-    $('#tweet-text').focus();
-  });
-
   // HANDLES SUBMIT FORM
   $('.post-tweet-form').submit(function(event) {
     event.preventDefault();
-
     const tweet = $('#tweet-text').val();
-    console.log('tweet length: ', tweet.length);
-
     $('.new-tweet-alert').hide();
 
     if (tweet.length > 140) {
@@ -78,25 +75,17 @@ $(document).ready(() => {
       $('.new-tweet-alert').show('slide').text(escape('Your sting is empty!'));
       return;
     }
-
     $('.tweets-container').empty();
     $('.loading-gif').show('slide');
-    //UX element
+    // ux element
     setTimeout(() => {
-      $.post(
-        '/tweets', // url
-        $(this).serialize(), // data to be submit
-        function() {
-          // success callback
-          $('.tweets-container').empty();
-          $('#tweet-text').val('');
-          $('.counter').text(escape('140'));
-          // $('.submit-button').attr('disabled', 'disabled');
-          loadtweets();
-          $('.loading-gif').hide();
-          console.log('FORM SUBMITTED');
-        }
-      );
+      $.post('/tweets', $(this).serialize(), function() {
+        $('.tweets-container').empty();
+        $('#tweet-text').val('');
+        $('.counter').text(escape('140'));
+        loadtweets();
+        $('.loading-gif').hide();
+      });
     }, 600);
   });
 
