@@ -31,8 +31,8 @@ Enjoy my spin on Tweeter, called Stinger!
 ## Take a tour!
 
 1. A quick look through the app!
-   !["Large Display"](overview)
+   !["Large Display"](https://github.com/harinderlabana/tweeter/blob/master/docs/overview.gif?raw=true)
 
 2. Optimized for both large and small displays.
-   !["Large Display"](main-large)
-   !["Small Display"](main-small)
+   !["Large Display"](https://github.com/harinderlabana/tweeter/blob/master/docs/main-large.png?raw=true)
+   !["Small Display"](https://github.com/harinderlabana/tweeter/blob/master/docs/main-small.png?raw=true)
