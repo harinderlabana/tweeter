@@ -17,7 +17,9 @@ $(document).ready(() => {
   // SHOW/HIDE NEW TWEET ELEMENT
   $('.nav-right').click(function() {
     $('.new-tweet').toggle('slide');
+    $('.new-tweet-alert').hide();
     $('#tweet-text').focus();
+    $('#tweet-text').val('');
   });
 
   // CREATE TWEET
@@ -86,7 +88,7 @@ $(document).ready(() => {
         loadtweets();
         $('.loading-gif').hide();
       });
-    }, 600);
+    }, 250);
   });
 
   // LOAD TWEETS

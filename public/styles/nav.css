@@ -1,3 +1,4 @@
+/* BASE STYLING */
 nav {
   display: flex;
   position: fixed;
@@ -36,6 +37,23 @@ span a {
   text-decoration: inherit;
 }
 
+.nav-arrow-down {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  color: #ecdbba;
+}
+.nav-arrow-down:hover {
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+}
+
+/* ANIMATIONS */
 @keyframes bounce {
   0%,
   100%,
@@ -56,19 +74,4 @@ span a {
     -ms-transform: translateY(-15px);
     transform: translateY(-15px);
   }
-}
-.nav-arrow-down {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-  color: #ecdbba;
-}
-.nav-arrow-down:hover {
-  animation-name: bounce;
-  -moz-animation-name: bounce;
 }

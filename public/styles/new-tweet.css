@@ -1,7 +1,7 @@
 .post-tweet-form {
   display: flex;
   flex-direction: column;
-  padding-top: 1em;
+  padding-top: 1.5em;
 }
 
 textarea {
@@ -34,8 +34,8 @@ textarea {
 .submit-button {
   background-color: #161616;
   color: #ecdbba;
-  padding-top: 0.3em;
   cursor: pointer;
+  padding: 0.2em;
 }
 
 .new-tweet-alert {

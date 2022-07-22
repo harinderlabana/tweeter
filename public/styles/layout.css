@@ -30,10 +30,11 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+/* BASE STYLING */
 main {
   display: flex;
   flex-direction: column;
-  width: 90vw;
+  width: 90%;
   background-color: body;
   padding: 1em 1.5em 2em 2em;
 }
@@ -64,6 +65,7 @@ main {
   background-color: #555;
 }
 
+/* MEDIA QUERIES */
 @media all and (min-width: 875px) {
   body {
     display: flex;
@@ -73,12 +75,9 @@ main {
   }
 
   main {
+    width: 60%;
     max-width: 1000px;
     padding-top: 6em;
-  }
-
-  header {
-    float: inline-start;
   }
 
   .tweets-container {

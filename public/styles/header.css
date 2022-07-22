@@ -1,3 +1,4 @@
+/* BASE STYLING */
 header {
   display: flex;
   flex-direction: column;
@@ -6,21 +7,87 @@ header {
   height: 520px;
   width: 100vw;
   padding-top: 120px;
-  background-color: #161616;
   font-size: 1.5em;
   color: #ecdbba;
+  background: linear-gradient(130deg, #42047e, #161616, #07f49e);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+.profile-picture {
+  padding-top: 1em;
 }
 
 .profile-picture img {
   max-width: 7.2em;
 }
 
+.front-name {
+  margin-top: -0.5em;
+}
+
+/* MEDIA QUERIES */
 @media all and (min-width: 875px) {
   header {
-    padding: 6em 2em 1.5em 1.5em;
-    background-color: #d89216;
-    width: auto;
+    width: 500px;
+    height: 450px;
     font-size: 1.5em;
-    color: #161616;
+    color: #ecdbba;
+    margin-top: 5em;
+    margin-left: 1em;
+    padding-top: 1em;
+    border: #161616 solid 0.1em;
+    background: linear-gradient(130deg, #42047e, #161616, #07f49e);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+  }
+
+  header:hover {
+    box-shadow: #161616 0.3em 0.3em;
+  }
+
+  .profile-picture {
+    padding-top: 0;
+  }
+}
+
+/* ANIMATIONS */
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
   }
 }

@@ -6,6 +6,7 @@
   background-color: #ecdbba;
   margin-top: 1.5em;
   padding: 1em 1em 0em 1em;
+  width: 100%;
 }
 
 .tweet-header {
@@ -21,15 +22,14 @@
 }
 
 .user-avatar {
-  display: flex;
   padding-right: 0.5em;
 }
 
 .user-tweet {
-  display: flex;
   border-bottom: #000000 solid 0.2em;
   font-weight: 600;
   padding: 1em;
+  word-wrap: break-word;
   width: 100%;
 }
 
@@ -47,7 +47,7 @@
 }
 
 .tweet-feed:hover {
-  box-shadow: 0.5em 0.5em #161616;
+  box-shadow: 0.3em 0.3em #161616;
 }
 
 .loading-gif {
