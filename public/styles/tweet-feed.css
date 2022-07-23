@@ -30,6 +30,7 @@
   font-weight: 600;
   padding: 1em;
   word-wrap: break-word;
+  white-space: pre-wrap;
   width: 100%;
 }
 
